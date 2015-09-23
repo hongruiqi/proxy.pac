@@ -11,8 +11,12 @@ var FindProxyForURL = function(init, profiles) {
 }("+\u81ea\u52a8\u5207\u6362", {
     "+\u81ea\u52a8\u5207\u6362": function(url, host, scheme) {
         "use strict";
-        if (/(?:^|\.)blogblog\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)github\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)sinajs\.cn$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)sinaimg\.cn$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)optimizely\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)ftnew\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)blogblog\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)blogger\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)bruzah\.blogspot\.sg$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)bruzah\.blogspot\.com$/.test(host)) return "+shadowsocks";
