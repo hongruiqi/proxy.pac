@@ -11,6 +11,8 @@ var FindProxyForURL = function(init, profiles) {
 }("+\u81ea\u52a8\u5207\u6362", {
     "+\u81ea\u52a8\u5207\u6362": function(url, host, scheme) {
         "use strict";
+        if (/(?:^|\.)blogspot\./.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)wp\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)google\.com\.sg$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)gstatic\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)google\.com$/.test(host)) return "+shadowsocks";
