@@ -11,6 +11,20 @@ var FindProxyForURL = function(init, profiles) {
 }("+\u81ea\u52a8\u5207\u6362", {
     "+\u81ea\u52a8\u5207\u6362": function(url, host, scheme) {
         "use strict";
+        if (/(?:^|\.)freemacsoft\.net$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)rubiconproject\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)bttrack\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)crwdcntrl\.net$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)serving-sys\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)truste\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)cbsi\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)fdlstatic\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)cnet\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)segment\.io$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)sourcetreeapp\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)atlassian\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)scootersoftware\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)change-vision\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)googlevideo\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)xiaxue\.sg$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)blogspot\./.test(host)) return "+shadowsocks";
