@@ -11,6 +11,12 @@ var FindProxyForURL = function(init, profiles) {
 }("+\u81ea\u52a8\u5207\u6362", {
     "+\u81ea\u52a8\u5207\u6362": function(url, host, scheme) {
         "use strict";
+        if (/(?:^|\.)slideshare\.net$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)linkedin\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)scorecardresearch\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)virtualbox\.org$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)imgur\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)sstatic\.net$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)freemacsoft\.net$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)rubiconproject\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)bttrack\.com$/.test(host)) return "+shadowsocks";
