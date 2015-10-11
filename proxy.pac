@@ -11,6 +11,16 @@ var FindProxyForURL = function(init, profiles) {
 }("+\u81ea\u52a8\u5207\u6362", {
     "+\u81ea\u52a8\u5207\u6362": function(url, host, scheme) {
         "use strict";
+        if (/(?:^|\.)paddle\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)google\.com\.sg$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)c3\.cx$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)weibo\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)sina\.cn$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)tanx\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)sinajs\.cn$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)sina\.com\.cn$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)sinaimg\.cn$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)googlesyndication\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)slideshare\.net$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)linkedin\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)scorecardresearch\.com$/.test(host)) return "+shadowsocks";
@@ -35,7 +45,6 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)xiaxue\.sg$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)blogspot\./.test(host)) return "+shadowsocks";
         if (/(?:^|\.)wp\.com$/.test(host)) return "+shadowsocks";
-        if (/(?:^|\.)google\.com\.sg$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)gstatic\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)google\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)googleusercontent\.com$/.test(host)) return "+shadowsocks";
@@ -47,8 +56,6 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)gravatar\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)facebook\.net$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)github\.com$/.test(host)) return "+shadowsocks";
-        if (/(?:^|\.)sinajs\.cn$/.test(host)) return "+shadowsocks";
-        if (/(?:^|\.)sinaimg\.cn$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)optimizely\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)ftnew\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)blogblog\.com$/.test(host)) return "+shadowsocks";
