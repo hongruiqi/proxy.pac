@@ -11,6 +11,7 @@ var FindProxyForURL = function(init, profiles) {
 }("+\u81ea\u52a8\u5207\u6362", {
     "+\u81ea\u52a8\u5207\u6362": function(url, host, scheme) {
         "use strict";
+        if (/(?:^|\.)adobe\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)paragon-software\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)paragon-drivers\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)sqlalchemy\.org$/.test(host)) return "+shadowsocks";
