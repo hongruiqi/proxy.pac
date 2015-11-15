@@ -11,6 +11,19 @@ var FindProxyForURL = function(init, profiles) {
 }("+\u81ea\u52a8\u5207\u6362", {
     "+\u81ea\u52a8\u5207\u6362": function(url, host, scheme) {
         "use strict";
+        if (/(?:^|\.)cloudfront\.net$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)rubiconproject\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)google\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)cloudfront\.net$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)lucidchart\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)version-lucidchart-com\.s3\.amazonaws\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)sinaimg\.cn$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)weibo\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)fonts\.googleapis\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)feedburner\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)gradle\.org$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)audienceiq\.com$/.test(host)) return "+shadowsocks";
+        if (/(?:^|\.)speakerdeck\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)googletagmanager\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)bizographics\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)google-code-prettify\.googlecode\.com$/.test(host)) return "+shadowsocks";
@@ -19,7 +32,6 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)elastic\.co$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)apache\.org$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)progiciels-bpi\.ca$/.test(host)) return "+shadowsocks";
-        if (/(?:^|\.)google\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)google\.com\.sg$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)godoc\.org$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)bootstrapcdn\.com$/.test(host)) return "+shadowsocks";
@@ -33,12 +45,10 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)kdgregory\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)paddle\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)c3\.cx$/.test(host)) return "+shadowsocks";
-        if (/(?:^|\.)weibo\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)sina\.cn$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)tanx\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)sinajs\.cn$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)sina\.com\.cn$/.test(host)) return "+shadowsocks";
-        if (/(?:^|\.)sinaimg\.cn$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)googlesyndication\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)slideshare\.net$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)linkedin\.com$/.test(host)) return "+shadowsocks";
@@ -47,7 +57,6 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)imgur\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)sstatic\.net$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)freemacsoft\.net$/.test(host)) return "+shadowsocks";
-        if (/(?:^|\.)rubiconproject\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)bttrack\.com$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)crwdcntrl\.net$/.test(host)) return "+shadowsocks";
         if (/(?:^|\.)serving-sys\.com$/.test(host)) return "+shadowsocks";
